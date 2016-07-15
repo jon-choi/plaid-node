@@ -1,0 +1,21 @@
+<link rel="stylesheet" type="text/css" href="main.css">
+<!-- <script type="text/javascript" src="server.js"></script> -->
+<!-- <script type="text/javascript" src="node_modules/requirejs/require.js"></script> -->
+<script data-main="server" src="node_modules/requirejs/require.js"></script>
+
+<!-- A hidden input named public_token will be appended to this form
+once the user has completed the Link flow. Link will then submit the
+form, sending the public_token to your server. -->
+<form id="some-id" method="POST" action="/authenticate"></form>
+
+<!-- To use Link with longtail institutions on Connect, set the
+data-longtail attribute to 'true'. See the Parameter Reference for
+additional documentation. -->
+<script
+  src="https://cdn.plaid.com/link/stable/link-initialize.js"
+  data-client-name="Client Name"
+  data-form-id="some-id"
+  data-key="test_key"
+  data-product="auth"
+  data-env="tartan">
+</script>
